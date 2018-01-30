@@ -13,8 +13,13 @@ html {
   box-sizing: inherit;
 }
 
+p {
+  margin: 0;
+}
+
 body {
   margin: 0;
+  overflow: hidden;
 }
 
 h1,
@@ -28,3 +33,143 @@ h6 {
   font-size: 1.5em;
 }
 
+.codepen {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr 1fr auto;
+  height: 100vh;
+}
+
+/*  HEADER STYLING */
+.pen {
+  display: flex;
+  align-items: center;
+  padding: .5rem;
+  background: #111;
+}
+
+.pen__details {
+  flex: 1;
+  color: #fff;
+}
+
+.pen__author {
+  color: #999;
+}
+
+/* BUTTON STYLING */
+
+.button {
+  background: #333;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 1rem;
+  color: #fff;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button--dirty {
+  position: relative;
+}
+
+.button--dirty::before {
+  background: rgb(195, 195, 36);
+  content: '';
+  display: block;
+  height: 2px;
+  width: 92%;
+  position: absolute;
+  left: 3px;
+  top: 5px;
+}
+
+.button--small {
+  padding: 4px;
+  height: auto;
+}
+
+.button--black {
+  background: #111;
+}
+
+/* EDITOR STYLING  */
+.code {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #333;
+  border-left: 1px inset #666;
+  position: relative;
+}
+
+.code::before, .code::after {
+  display: block;
+  content: '';
+  height: 4px;
+  background: #333;
+  position: absolute;
+  width: 100%;
+  box-shadow: 0px 1px 1px #111111;
+}
+
+.code::after {
+  height: 1rem;
+  border-top: 1px inset #333;
+  bottom: 0;
+}
+
+.editor {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  background: #242e30;
+  margin-left: 1rem;
+  border-right: 1px outset #666;
+  height: calc(100% - 1rem);
+}
+
+.editor__header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  font-weight: bold;
+  color: #999;
+  background: #1c2324;
+  padding: 4px;
+}
+
+.editor__code {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  color: #666;
+}
+
+.editor__gutter {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: start;
+  color: #fff;
+  font-size: .75rem;
+  margin: 2px .5rem;
+}
+
+.editor__input {
+  background: none;
+  resize: none;
+  border: none;
+  color: #999;
+  font-size: .75rem;
+}
+
+/* PREVIEW STYLING */
+.preview {
+  display: grid;
+}
+
+/* FOOTER STYLING */
+.settings {
+  background: #333;
+}
