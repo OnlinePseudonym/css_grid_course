@@ -97,7 +97,47 @@
 
 
   <style>
-  </style>
+    P {
+      margin: 0;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    @media screen and (min-width: 500px) {
+      body {
+        margin: 50px;
+      }
+    }
+
+    .albums {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 3rem;
+      align-content: space-around;
+    }
+
+    .album {
+      display: grid;
+      grid-template-columns: 125px 1fr;
+      grid-gap: 1rem;
+      background: rgba(255, 255, 255, 0.3);
+      padding: 2rem;
+      color: #fff;
+      align-items: center;
+      font-weight: 400;
+    }
+
+    
+    .album__artwork {
+      width: 100%;
+    }
+    
+    .album__artist {
+      font-weight: 600;
+    }
+    </style>
 </body>
 
 </html>
